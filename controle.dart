@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 main() {
@@ -46,20 +47,20 @@ main() {
     }
   }
 
-  Map<String, double> notas = {
+  Map<String, double> boletim = {
     'João Pedro': 9.1,
     'Maria Augusta': 7.2,
     'Ana Silva': 6.4,
     'Roberto Andrade': 8.8,
     'Pedro Firmino': 9.9,
   };
-  for (String nome in notas.keys) {
-    print("Nome do aluno é $nome e a nota é ${notas[nome]}");
+  for (String nome in boletim.keys) {
+    print("Nome do aluno é $nome e a nota é ${boletim[nome]}");
   }
-  for (var nota in notas.values) {
+  for (var nota in boletim.values) {
     print("A nota é $nota");
   }
-  for (var registro in notas.entries) {
+  for (var registro in boletim.entries) {
     print("O ${registro.key} tem nota ${registro.value}.");
   }
 
@@ -73,8 +74,8 @@ main() {
     digitado = stdin.readLineSync().toString();
   } while (digitado != 'sair');
 
-  var nota = Random().nextInt(11);
-  print('A nota sorteada foi $nota.');
+  var num = Random().nextInt(11);
+  print('A número sorteada foi $num.');
 
   switch (nota) {
     case 10:
