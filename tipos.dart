@@ -19,7 +19,6 @@ void main() {
 
   bool estaChovendo = false;
   bool estaFrio = true;
-  // ignore: dead_code
   print(estaChovendo && estaFrio);
   print(estaChovendo || estaFrio);
 
@@ -29,22 +28,23 @@ void main() {
   print(frutas.elementAt(2));
   print(frutas.length);
 
-  Map agendaTelefonica = {"joao": "35 9 9999-9999", "maria": "35 9 8888-8888"};
+  Map agendaTelefonica = {
+    "joao": "35 9 9999-9999",
+    "maria": "35 9 8888-8888"
+  };
   print(agendaTelefonica);
   print(agendaTelefonica.keys);
   print(agendaTelefonica.values);
   print(agendaTelefonica['maria']);
 
-  // ignore: equal_elements_in_set
   Set numeros = {1, 2, 3, 4, 5, 5};
   print(numeros);
   numeros.add(6);
   numeros.add(6);
   print(numeros);
-
+  
   var c;
   c = "texto";
-  print(c);
 
   dynamic d = 4;
   d = "texto";

@@ -3,7 +3,7 @@
 - O programa a ser feito deve ser uma calculadora simples.
 - Deve ter a possibildade de receber operações até que o usuário peça para sair com o texto "Digite a operação respeitando o formato (2 + 2) ou digite sair: "
 - A calculadora deve reconhecer todas as operações por meio do operador entre os dois operandos.
-- Apõs a inserção do usuário, o programa deve mostrar o resultado junto com a operação.
+- Após a inserção do usuário, o programa deve mostrar o resultado junto com a operação.
   - Exemplo:
     ```
       1 + 1 = 2

@@ -11,7 +11,6 @@ void main() {
   bool estaCalor = true;
   bool estaNevando = false;
   print(estaCalor && estaNevando);
-  // ignore: dead_code
   print(estaCalor || estaNevando);
 
   a += b;
