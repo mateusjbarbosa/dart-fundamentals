@@ -1,31 +1,33 @@
+// O programa deve ser capaz de capturar as notas de uma determinada matéria.
+import "./perguntaMateria.dart";
+import './perguntaNota.dart';
 import './calcularMedia.dart';
-import './escreverSituacao.dart';
-import './perguntarMateria.dart';
-import './perguntarNota.dart';
 
 void main() {
+  // Deve ter a possibilidade de capturar mais de uma matéria - OK
   String materia = "";
   Map<String, List<double>> boletim = {};
 
-  materia = perguntarMateria();
+  materia = perguntaMateria();
+
   while (materia.toLowerCase() != "sair") {
+    // Deve ter a possibilidade de capturar mais de uma nota por matéria - OK
     double nota = 0;
     List<double> notas = [];
 
-    nota = perguntarNota();
+    nota = perguntaNota();
+
     while (nota != -1) {
       notas.add(nota);
-      nota = perguntarNota();
+
+      nota = perguntaNota();
     }
 
-    boletim[materia] = notas;
+    // boletim[portugues] = [10, 4, 6, 10]
+    boletim[materia] = notas; // boletim[mobile] = [10, 6, 7.5, 8];
 
-    materia = perguntarMateria();
+    materia = perguntaMateria();
   }
 
-  boletim.forEach((materia, notas) {
-    double media = calcularMedia(notas);
-
-    escreverSituacao(materia, media);
-  });
+  calculaMedia(boletim);
 }
